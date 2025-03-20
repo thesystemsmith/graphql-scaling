@@ -1,0 +1,21 @@
+{
+  "name": "graphql-scaling",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/thesystemsmith/graphql-scaling.git",
+  "author": "abdul rasheed <abdul.rasheed@simpleenergy.in>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/node": "^7.26.0",
+    "@babel/preset-env": "^7.26.9",
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "@graphql-tools/schema": "^10.0.23",
+    "apollo-server-express": "^3.13.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "graphql": "^16.10.0"
+  }
+}
