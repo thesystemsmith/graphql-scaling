@@ -5,6 +5,9 @@
   "repository": "https://github.com/thesystemsmith/graphql-scaling.git",
   "author": "abdul rasheed <abdul.rasheed@simpleenergy.in>",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon ./index.js --exec babel-node"
+  },
   "devDependencies": {
     "@babel/core": "^7.26.10",
     "@babel/node": "^7.26.0",
