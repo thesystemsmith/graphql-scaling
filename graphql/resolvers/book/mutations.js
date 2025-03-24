@@ -1,22 +1,24 @@
 import { Book } from '../../../db/models';
 
 const bookMutations = {
-  createBook: async (_, { book }) => {
-    const newBook = new Book(book);
-
-    return newBook.save();
-  },
-  updateBook: async (_, { id, book }) => {
-    const updatedBook = await Book.findByIdAndUpdate(
-      id,
-      {
-        $set: { ...book },
+    createBook: async (_, { book }, { loaders }) => {
+        const newBook = new Book(book);
+    
+        const savedBook = newBook.save();
+    
+        return loaders.book.one(savedBook._id);
       },
-      { new: true }
-    );
-
-    return updatedBook;
-  },
+      updateBook: async (_, { id, book }, { loaders }) => {
+        const updatedBook = await Book.findByIdAndUpdate(
+          id,
+          {
+            $set: { ...book },
+          },
+          { new: true }
+        );
+    
+        return loaders.book.one(id);
+      },
 };
 
 
