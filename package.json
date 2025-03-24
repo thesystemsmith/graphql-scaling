@@ -6,7 +6,8 @@
   "author": "abdul rasheed <abdul.rasheed@simpleenergy.in>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon ./index.js --exec babel-node"
+    "dev": "nodemon ./index.js --exec babel-node",
+    "db:seed": "babel-node ./db/scripts/seed.js"
   },
   "devDependencies": {
     "@babel/core": "^7.26.10",
